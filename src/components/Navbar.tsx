@@ -109,10 +109,8 @@ export function Navbar({ isDarkMode, toggleTheme }: NavbarProps) {
             {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
           </Button>
           <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
+            <SheetTrigger render={<Button variant="ghost" size="icon" />}>
+              <Menu className="h-6 w-6" />
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
               <nav className="flex flex-col gap-6 mt-12">
